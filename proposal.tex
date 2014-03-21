@@ -10,15 +10,17 @@
 
 \begin{itemize}
   \item Name: Alick Zhao
+  \item Chinese name: Tao ZHAO
   \item Email: \url{alick9188@gmail.com}
   \item IRC: alick at freenode
-  \item Web Page: \url{http://alick.me}
+  \item Web page: \url{http://alick.me}
+  \item Blog: \url{https://wp-awesome.rhcloud.com/}
   \item Location: Beijing, China (UTC+8)
 \end{itemize}
 
 \section{Background Information}
 
-I am a master student in Department of Electronic Engineering, Tsinghua
+I am a master student in the Department of Electronic Engineering, Tsinghua
 University, Beijing, China. I major in wireless communications, and
 software defined radio is among my research interests. I have published
 one paper about software defined radio implementation upon
@@ -36,7 +38,7 @@ I was not active for some time due to lab research focus shift, but I
 always keep an eye on the GNU Radio updates.  I'm really excited about
 the new features in recent versions of GNU Radio, and glad to see more and more
 third-party open source modules about more interfacing devices, advanced
-signal processing techniques, and wireless systems.
+signal processing techniques, and modern wireless systems.
 
 \subsection{Past experience with Open Source Projects}
 
@@ -46,7 +48,7 @@ chair IRC meetings, and organize offline events.  I would like to have
 some packaging work, such as packaging GNU Radio related projects in the
 near future. I am also an active member of TUNA, the open source league
 in Tsinghua. I serve as a maintainer of the open source mirror site in
-campus, a mentor for newcomers, and an organizer and host of various
+campus, a mentor for league newcomers, and an organizer and host of various
 events. Recently I also work on \textsc{ThuThesis}, a \LaTeX\ thesis template
 for Tsinghua University as well as my personal projects on
 \href{https://github.com/alick9188}{Github}.
@@ -57,15 +59,15 @@ PyBOMBS (Python Build Overlay Managed Bundle System) is the new install
 management system for GNU Radio which can resolve the dependencies and
 install out-of-tree GNU Radio projects. It provides a central, easy to
 use tool to prepare the software defined radio development platform.
-Although the development is in early stage and it is not feature
+Although it is in early stage and not feature
 complete, I think PyBOMBS has great potential to integrate the whole GNU
 Radio ecosystem and lower the barrier to newcomers. That's why I want to
-make it better through this GSoC project and afterwards.
+make it better through this GSoC project and future contributions.
 
 \section{Suggested Improvements}
 
 Below are a list of possible improvements suggested by the community
-with my explanations:
+and my understanding to the points:
 
 \begin{itemize}
   \item \emph{Develop documentation and tutorials:} Well-written
@@ -89,8 +91,8 @@ with my explanations:
     satisfactory. A nice integration between CGRAN and PyBOMBS can
     encourage usage of CGRAN, forming a better ecosystem. For example,
     required metadata field can be enforced when submitting projects to
-    CGRAN. CGRAN might be the most suitable hosting platform for user
-    rating, automatic building, and testing.
+    CGRAN. Besides, CGRAN might be the most suitable platform for user
+    rating data as well as automatic building and testing.
   \item \emph{Test on additional operating systems and software
     configurations:} Testing is good. More tests will improve the code quality of
     PyBOMBS\@. It can also help to find bugs in out-of-tree projects.
@@ -104,15 +106,15 @@ with my explanations:
     could be used in app store, and exported to the CGRAN website.
   \item \emph{Core refinements:} For example, the distribution package
     handling code is better to be abstracted and unified to accommodate
-    more distributions. We need to handle the options of complex
-    projects in a similar way as Gentoo's USE flag.
+    more distributions. We also need to handle the options of complex
+    projects. The solution might be similar to the Gentoo's USE flag.
   \item \emph{Multiple version coexistence:} Currently different
     out-of-tree projects have different compatibility levels with GNU
     Radio. Since GNU Radio recently has quite a few API upgrades,
     some projects choose to use different develop branches to be
     compatible with different versions of GNU Radio. Therefore it is
     likely an end user will need to have multiple versions of GNU Radio
-    installed, and use different version with different out-of-tree
+    installed, and use different versions with different out-of-tree
     projects. To address the issue, the implementation of
     virtualenv for Python and rvm for Ruby can hopefully give some guidance.
 \end{itemize}
@@ -130,7 +132,7 @@ My proposed work items during GSoC period are as follows:
     Besides, a tutorial on the usage of PyBOMBS with a sample out-of\-
     tree project shall be created, which servers analogical purpose as
     GNU Radio's ``How to write a block''. The documentation will be
-    updated along with the development cycle.
+    updated along with the whole development phase.
   \item \emph{Abstract package handling code:} I will dive into the
     code handling binary packages in various Linux distributions, and
     find a way to abstract the code to expose a unified interface, and
@@ -166,12 +168,13 @@ The deliverables of my GSoC project will be:
 
 \section{Timeline}
 
-I will be available from April 21 to August 22 to ensure time commitment
-for GSoC project.  I am an organizer of upcoming FUDCon APAC 2014 on May
-23--25, so my time for GSoC in that period might be less.  Later I might
-have at most one week on vacation away from coding and reliable network.
-But overall I think I can devote my summer time into the project.
-The tentative agenda is illustrated in Table~\ref{tab:timeline}.
+I will be available from April 21 to August 22 for GSoC project although
+I have some other work or vacation.  I am an organizer of upcoming
+FUDCon APAC 2014 on May 23--25, so my time for GSoC in starting period
+might be less.  Later in summer I might have at most one week on
+vacation away from coding and reliable network.  But overall I think I
+can devote my summer time into the project and fulfil my tasks.  The
+tentative agenda is illustrated in Table~\ref{tab:timeline}.
 
 \begin{table}[htbp]
   \centering

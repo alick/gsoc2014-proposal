@@ -1,0 +1,78 @@
+\documentclass[a4paper]{article}
+\begin{document}
+\title{GSoC'14: Improving PyBOMBS}
+\author{Alick Zhao}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+
+PyBOMBS (Python Build Overlay Managed Bundle System) is the new install
+management system for GNU Radio which can resolve the dependencies and
+install out-of-tree GNU Radio projects.
+
+\section{Suggested Improvements}
+
+Below are a list of possible improvements suggested by the mentor Tim O'Shea:
+
+\begin{itemize}
+  \item \emph{Develop documentation and tutorials:} Well-written
+    documentation and tutorials about the usage of PyBOMBS system
+    can make it easier for out-of-tree
+    project developers to get along with PyBOMBS.
+    We also need up to date documentations of API, coding style for
+    PyBOMBS developers to contribute easily.
+  \item \emph{More full featured GUI:} Currently the GUI just displays
+    all available applications and all installed applications.
+    More operations should be supported, and a search function is
+    necessary concerning scalability. Besides the UI can be much
+    improved.
+  \item \emph{Improve app store:} To better present the out-of-tree
+    projects, we need include metadata (author information, description,
+    dependencies) and present them in the GUI. Automatic metadata
+    extraction is appreciated. User rating will be a good plus.
+  \item \emph{Integrate with CGRAN:} We have CGRAN to host out-of-tree
+    GNU Radio projects for quite some time. But its usage is not quite
+    satisfactory.
+  \item \emph{Test on additional operating systems and software
+    configurations:} Testing is good. More tests will improve the code quality of
+    PyBOMBS\@. It can also help to find bugs in out-of-tree projects.
+  \item \emph{Develop automated test build systems:} We want to use
+    automated tests to validate the working state of development
+    branches of all packages, the compatibility of out-of-tree projects
+    with new GNU Radio releases. The result
+    could be used in app store, and exported to the CGRAN website.
+\end{itemize}
+
+\section{Proposed Work for GSoC}
+
+My proposed work items during GSoC period are as follows:
+
+\begin{enumerate}
+  \item \emph{Documentation and tutorials:} I want to begin with
+    enriching the documentation for both PyBOMBS users and developers
+    while I get familiar with it, which should be helpful to the
+    project as well as my understanding of it. I will use Redmine Wiki
+    for user documentation, and Sphinx for API documentation.
+    Besides, a tutorial on the usage of PyBOMBS with a sample out-of\-
+    tree project shall be created, which servers analogical purpose as
+    GNU Radio's ``How to write a block''. The documentation will be
+    updated along with the development cycle.
+  \item \emph{Improve app store:} I will come up with a list of
+    necessary (or nice to have) metadata for each application and make a
+    specification. Then I will investigate automatic ways of importing
+    metadata from out-of-tree project upstream, for example using Github
+    APIs to get various repository information for projects hosted on
+    Github.
+  \item \emph{Improve the GUI:} I will seek inspiration from GNOME
+    Applicatons and various app stores, and come up with a modern design
+    of the GUI. An interface of application details and the search
+    functionality will be included. I will implement the design with
+    PyQt4.
+\end{enumerate}
+
+\section{Timeline}
+\section{Conclusion}
+
+\end{document}
+% vim:set sw=2 tw=72:

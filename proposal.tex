@@ -1,15 +1,66 @@
 \documentclass[a4paper]{article}
+\usepackage{hyperref}
 \begin{document}
 \title{GSoC'14: Improving PyBOMBS}
 \author{Alick Zhao}
 \date{\today}
 \maketitle
 
-\section{Introduction}
+\section{Contact Information}
+
+\begin{itemize}
+  \item Name: Alick Zhao
+  \item Email: \url{alick9188@gmail.com}
+  \item IRC: alick at freenode
+  \item Web Page: \url{http://alick.me}
+  \item Location: Beijing, China (UTC+8)
+\end{itemize}
+
+\section{Background Information}
+
+I am a master student in Department of Electronic Engineering, Tsinghua
+University, Beijing, China. I major in wireless communications, and
+software defined radio is among my research interests. I have published
+one paper about software defined radio implementation upon
+OpenBTS~\cite{zhao2013software}.
+
+\subsection{Past experience with GNU Radio}
+
+I have been using GNU Radio along with USRP, and
+on the discuss-gnuradio mailing list since two years ago.
+I used it to build a MIMO precoding system for my bachelor thesis.\footnote{%
+The thesis is in Chinese and available at %
+\url{http://cloud.alick.me/public.php?service=files&t=0a67a7f2d09a1b4385dc85018d487918}.}%
+I submitted several bug reports and contributed one patch on the list.
+I was not active for some time due to lab research focus shift, but I
+always keep an eye on the GNU Radio updates.  I'm really excited about
+the new features in recent versions of GNU Radio, and glad to see more and more
+third-party open source modules about more interfacing devices, advanced
+signal processing techniques, and wireless systems.
+
+\subsection{Past experience with Open Source Projects}
+
+Besides GNU Radio, I take part in quite a few open source projects.  I
+am an active Fedora contributor. For now I regularly do translations,
+chair IRC meetings, and organize offline events.  I would like to have
+some packaging work, such as packaging GNU Radio related projects in the
+near future. I am also an active member of TUNA, the open source league
+in Tsinghua. I serve as a maintainer of the open source mirror site in
+campus, a mentor for newcomers, and an organizer and host of various
+events. Recently I also work on \textsc{ThuThesis}, a \LaTeX\ thesis template
+for Tsinghua University as well as my personal projects on
+\href{https://github.com/alick9188}{Github}.
+
+\section{Project Information}
 
 PyBOMBS (Python Build Overlay Managed Bundle System) is the new install
 management system for GNU Radio which can resolve the dependencies and
-install out-of-tree GNU Radio projects.
+install out-of-tree GNU Radio projects. It provides a central, easy to
+use tool to prepare the software defined radio development platform.
+Although the development is in early stage and it is not feature
+complete, I think PyBOMBS has great potential to integrate the whole GNU
+Radio ecosystem and lower the barrier to newcomers. That's why I want to
+make it better through this GSoC project and afterwards.
 
 \section{Suggested Improvements}
 
@@ -31,9 +82,11 @@ Below are a list of possible improvements suggested by the mentor Tim O'Shea:
     projects, we need include metadata (author information, description,
     dependencies) and present them in the GUI. Automatic metadata
     extraction is appreciated. User rating will be a good plus.
-  \item \emph{Integrate with CGRAN:} We have CGRAN to host out-of-tree
+  \item \emph{Integrate with CGRAN:} We have CGRAN\footnote{%
+    \url{https://www.cgran.org/}} to host out-of-tree
     GNU Radio projects for quite some time. But its usage is not quite
-    satisfactory.
+    satisfactory. A nice integration between CGRAN and PyBOMBS can
+    encourage usage of CGRAN, forming a better ecosystem.
   \item \emph{Test on additional operating systems and software
     configurations:} Testing is good. More tests will improve the code quality of
     PyBOMBS\@. It can also help to find bugs in out-of-tree projects.
@@ -65,7 +118,8 @@ My proposed work items during GSoC period are as follows:
     APIs to get various repository information for projects hosted on
     Github.
   \item \emph{Improve the GUI:} I will seek inspiration from GNOME
-    Applicatons and various app stores, and come up with a modern design
+    Software\footnote{https://live.gnome.org/Design/Apps/Software}
+    and various app stores, and come up with a modern design
     of the GUI. An interface of application details and the search
     functionality will be included. I will implement the design with
     PyQt4.
@@ -82,10 +136,12 @@ The deliverables of my GSoC project will be:
 
 \section{Timeline}
 
-I will be available from April 21 to August 22 to ensure time
-commitment for GSoC project. In the meantime I might have at most one week on
-vacation away from coding and reliable network. The tentative agenda is
-illustrated in Table~\ref{tab:timeline}.
+I will be available from April 21 to August 22 to ensure time commitment
+for GSoC project.  I am an organizer of upcoming FUDCon APAC 2014 on May
+23--25, so my time for GSoC in that period might be less.  Later I might
+have at most one week on vacation away from coding and reliable network.
+But overall I think I can devote my summer time into the project.
+The tentative agenda is illustrated in Table~\ref{tab:timeline}.
 
 \begin{table}[htbp]
   \centering
@@ -111,7 +167,19 @@ illustrated in Table~\ref{tab:timeline}.
   \label{tab:timeline}
 \end{table}
 
-\section{Conclusion}
+\begin{thebibliography}{1}
+
+\bibitem{zhao2013software}
+Tao Zhao, Pengkun Yang, Huimin Pan, Ruichen Deng, Sheng Zhou, and Zhisheng Niu.
+\newblock Software defined radio implementation of signaling splitting in
+  {Hyper-Cellular} network.
+\newblock In {\em Proceedings of the Second Workshop of Software Radio
+  Implementation Forum (SRIF 2013)}, SRIF '13, pages 81--84, New York, NY, USA,
+  August 2013. ACM.
+\newblock \href {http://dx.doi.org/10.1145/2491246.2491258}
+  {\path{doi:10.1145/2491246.2491258}}.
+
+\end{thebibliography}
 
 \end{document}
 % vim:set sw=2 tw=72:

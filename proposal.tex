@@ -64,7 +64,8 @@ make it better through this GSoC project and afterwards.
 
 \section{Suggested Improvements}
 
-Below are a list of possible improvements suggested by the mentor Tim O'Shea:
+Below are a list of possible improvements suggested by the community
+with my explanations:
 
 \begin{itemize}
   \item \emph{Develop documentation and tutorials:} Well-written
@@ -86,15 +87,34 @@ Below are a list of possible improvements suggested by the mentor Tim O'Shea:
     \url{https://www.cgran.org/}} to host out-of-tree
     GNU Radio projects for quite some time. But its usage is not quite
     satisfactory. A nice integration between CGRAN and PyBOMBS can
-    encourage usage of CGRAN, forming a better ecosystem.
+    encourage usage of CGRAN, forming a better ecosystem. For example,
+    required metadata field can be enforced when submitting projects to
+    CGRAN. CGRAN might be the most suitable hosting platform for user
+    rating, automatic building, and testing.
   \item \emph{Test on additional operating systems and software
     configurations:} Testing is good. More tests will improve the code quality of
     PyBOMBS\@. It can also help to find bugs in out-of-tree projects.
+    Currently PyBOMBS is mainly tested on Fedora, Ubuntu, and Debian,
+    but it is necessary to ensure other distribution users can use it
+    free of error.
   \item \emph{Develop automated test build systems:} We want to use
     automated tests to validate the working state of development
     branches of all packages, the compatibility of out-of-tree projects
     with new GNU Radio releases. The result
     could be used in app store, and exported to the CGRAN website.
+  \item \emph{Core refinements:} For example, the distribution package
+    handling code is better to be abstracted and unified to accommodate
+    more distributions. We need to handle the options of complex
+    projects in a similar way as Gentoo's USE flag.
+  \item \emph{Multiple version coexistence:} Currently different
+    out-of-tree projects have different compatibility levels with GNU
+    Radio. Since GNU Radio recently has quite a few API upgrades,
+    some projects choose to use different develop branches to be
+    compatible with different versions of GNU Radio. Therefore it is
+    likely an end user will need to have multiple versions of GNU Radio
+    installed, and use different version with different out-of-tree
+    projects. To address the issue, the implementation of
+    virtualenv for Python and rvm for Ruby can hopefully give some guidance.
 \end{itemize}
 
 \section{Proposed Work for GSoC}

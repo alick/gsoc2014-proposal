@@ -131,18 +131,26 @@ My proposed work items during GSoC period are as follows:
     tree project shall be created, which servers analogical purpose as
     GNU Radio's ``How to write a block''. The documentation will be
     updated along with the development cycle.
+  \item \emph{Abstract package handling code:} I will dive into the
+    code handling binary packages in various Linux distributions, and
+    find a way to abstract the code to expose a unified interface, and
+    potentially add support for more distributions.
   \item \emph{Improve app store:} I will come up with a list of
     necessary (or nice to have) metadata for each application and make a
     specification. Then I will investigate automatic ways of importing
     metadata from out-of-tree project upstream, for example using Github
-    APIs to get various repository information for projects hosted on
-    Github.
+    APIs or mechanisms on CGRAN to get various project information.
   \item \emph{Improve the GUI:} I will seek inspiration from GNOME
     Software\footnote{\url{https://live.gnome.org/Design/Apps/Software}}
     and various app stores, and come up with a modern design
     of the GUI. An interface of application details and the search
     functionality will be included. I will implement the design with
     PyQt4.
+  \item \emph{Packaging PyBOMBS for Linux distributions:} I will
+    work with package maintainers of major Linux distributions to make
+    PyBOMBS into their package repositories. The main concern is Fedora
+    and Debian, but it is better to be included in Arch Linux and Gentoo
+    as well.
 \end{enumerate}
 
 \section{Deliverables}
@@ -150,8 +158,10 @@ My proposed work items during GSoC period are as follows:
 The deliverables of my GSoC project will be:
 \begin{itemize}
   \item PyBOMBS documentation and tutorial.
+  \item A unified API handling distribution packaging.
   \item App metadata specifications.
   \item A modern good-looking GUI for PyBOMBS.
+  \item PyBOMBS packages in major Linux distributions.
 \end{itemize}
 
 \section{Timeline}
@@ -174,11 +184,12 @@ The tentative agenda is illustrated in Table~\ref{tab:timeline}.
     05/19 -- 05/25 & Create a tutorial about common PyBOMBS usage\\
     05/26 -- 06/01 & Enrich PyBOMBS documentation on wiki pages \\
     06/02 -- 06/08 & Setup Sphinx and generate API documentation \\
-    06/09 -- 06/22 & Create metadata specification, investigate
+    06/09 -- 06/15 & Abstract distribution package handling code \\
+    06/16 -- 06/22 & Create metadata specification, investigate
     automatic metadata extraction ways\\
     06/23 -- 06/27 & Midterm evaluation submission\\
     06/28 -- 07/13 & Coding for metadata extraction and importation \\
-    07/14 -- 07/20 & Design new GUI, get started with PyQt4 \\
+    07/14 -- 07/20 & Design new GUI, start packaging to distributions \\
     07/21 -- 08/10 & Coding for new GUI with PyQt4 \\
     08/11 -- 08/22 & Code clean-up, and final evaluation submission \\
     \hline

@@ -139,9 +139,14 @@ My proposed work items during GSoC period are as follows:
     GNU Radio's ``How to write a block''. The documentation will be
     updated along with the whole development phase.
   \item \emph{Abstract package handling code:} I will dive into the
-    code handling binary packages in various Linux distributions, and
-    find a way to abstract the code to expose a unified interface, and
-    potentially add support for more distributions.
+    code handling binary packages in various Linux distributions
+    (\nolinkurl{recipe.py}, \nolinkurl{sysutils.py}, etc.), and
+    adopt the object oriented (OO) approach to abstract the code to
+    expose a unified interface. In this way I can
+    potentially add support for more distributions such as Arch and Gentoo
+    with the help of package manager mapping information, for example
+    the \href{https://wiki.archlinux.org/index.php/Pacman_Rosetta}%
+    {Pacman Rosetta}.
   \item \emph{Improve app store:} I will come up with a list of
     necessary (or nice to have) metadata for each application and make a
     specification. Then I will investigate automatic ways of importing
@@ -152,7 +157,9 @@ My proposed work items during GSoC period are as follows:
     and various app stores, and come up with a modern design
     of the GUI. An interface of application details and the search
     functionality will be included. I will implement the design with
-    PyQt4.
+    PyQt4 graphic toolkit. I will focus on client search first (rather
+    than querying remote server) and consider to use cache mechanism to
+    imporve user experience.
   \item \emph{Packaging PyBOMBS for Linux distributions:} I will
     work with package maintainers of major Linux distributions to make
     PyBOMBS into their package repositories. The main concern is Fedora
